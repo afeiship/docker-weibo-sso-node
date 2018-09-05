@@ -11,14 +11,11 @@ const MAX_CACHE_TIME = 3 * 86400000;
 //middleware:
 app.use(koaJson());
 app.use(async ctx => {
-
-    const request = ctx.request;
-    const { url, method } = request;
-    const updatedAt = new Date(tokenJar.updated_at) * 1;
-    const newAt = Date.now();
+    const updateTs = new Date(tokenJar.updated_at) * 1;
+    const nowTs = Date.now();
 
     //> MAX_CACHE_TIME, update cache:
-    if ((newAt - updatedAt) > MAX_CACHE_TIME) {
+    if ((nowTs - updateTs) > MAX_CACHE_TIME) {
         const token = await weiboSso(secretJson);
         tokenJar.updated_at = (new Date()).toISOString();
         tokenJar.token = token;

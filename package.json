@@ -26,6 +26,6 @@
   "dependencies": {
     "koa": "^2.5.2",
     "koa-json": "^2.0.2",
-    "weibo-sso-node": "github:afeiship/weibo-sso-node"
+    "weibo-sso-node": "git+https://git@github.com/afeiship/weibo-sso-node"
   }
 }

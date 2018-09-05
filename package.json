@@ -1,0 +1,31 @@
+{
+  "name": "docker-weibo-sso-node",
+  "version": "1.0.0",
+  "description": "Docker for weibo sso node version.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/docker-weibo-sso-node.git"
+  },
+  "keywords": [
+    "weibo",
+    "sina",
+    "sso",
+    "login",
+    "upload"
+  ],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/docker-weibo-sso-node/issues"
+  },
+  "homepage": "https://github.com/afeiship/docker-weibo-sso-node#readme",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-json": "^2.0.2",
+    "weibo-sso-node": "github:afeiship/weibo-sso-node"
+  }
+}

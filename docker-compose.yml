@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  nodejs:
+    image: mhart/alpine-node
+    environment: 
+      NODE_ENV: production
+    working_dir: /www/app
+    restart: always
+    volumes:
+      - ${PWD}:/www/app
+    ports:
+      - 3002:3002
+    command: "npm start"

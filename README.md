@@ -3,7 +3,6 @@
 
 ## usage:
 ```shell
-
 cd ~/github
 git clone https://github.com/afeiship/docker-weibo-sso-node.git
 docker-compose up -d
